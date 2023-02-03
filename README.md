@@ -7,7 +7,7 @@
 
 ## Usage
 
-[Click here](https://hbarry89.github.io/Password-Generator/) to navigate to the live link of this repository.
+[Click here](https://hbarry89.github.io/Weather-Dashboard/) to navigate to the live link of this repository.
 
 - Screenshots
 
