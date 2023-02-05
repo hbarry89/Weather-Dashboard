@@ -1,0 +1,9 @@
+.titlebar {
+    background-image: linear-gradient(to right, blue, black);
+    color: white;
+    text-align: center;
+}
+
+.city-container {
+    border: solid 2px black;
+}
