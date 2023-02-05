@@ -17,7 +17,12 @@ var searchCityBtn = document.querySelector("#search-button");
 searchCityBtn.addEventListener("click", searchCity);
 
 function searchCity() {
-    alert("test serech button");
+    //alert("test serech button");
+    var input = document.querySelector("#city-input").value;
+        if (!input) {
+            alert("Please insert city name");
+            return;
+        }
 }
 
 searchCityBtn.addEventListener('click', function() {
