@@ -13,3 +13,13 @@
     background-color: lightgray;
     text-align: center;
 }
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    background-color: rgb(47, 50, 79);
+    color: white;
+    padding: 5px;
+}
