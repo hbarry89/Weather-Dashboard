@@ -19,11 +19,15 @@
         <div class="col-3">
             <h3>Search for a City:</h3>
             <p><!-- City info displayed here --></p>
-            <form class="search-city-form">
-                <input type="text" placeholder="san diego" name="search"> <br>
+            <form class="search-city-form" id="parent-input">
+                <input id="city-input" class="user-input" type="text" placeholder="san diego" name="search"> <br>
                 <div class="d-grid gap-2 col-6">
                     <button class="btn btn-primary" id="search-button" type="button">Search</button>
                 </div>
+            <section>
+                <!-- Stored cities info displayed here -->
+                <p id="stored-city1"></p>
+            </section>
 
             </form>
    

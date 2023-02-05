@@ -19,3 +19,11 @@ searchCityBtn.addEventListener("click", searchCity);
 function searchCity() {
     alert("test serech button");
 }
+
+searchCityBtn.addEventListener('click', function() {
+    var value = document.querySelector("#city-input").value;
+    var key = "city";
+  
+    localStorage.setItem(key, value);
+});
+  
