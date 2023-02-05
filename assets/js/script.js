@@ -20,7 +20,7 @@ function searchCity() {
     //alert("test serech button");
     var input = document.querySelector("#city-input").value;
         if (!input) {
-            alert("Please insert city name");
+            alert("Please insert a city name");
             return;
         }
 }
@@ -40,3 +40,11 @@ historyCityBtn.addEventListener("click", historyCity);
 function historyCity() {
     alert("test history city button");
 }
+
+    
+
+// if (historyCityBtn.value) {
+//   historyCityBtn.style.display = "block";
+// } else {
+//   historyCityBtn.style.display = "none";
+// }
