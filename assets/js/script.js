@@ -9,3 +9,13 @@
 // You will use localStorage to store any persistent data. For more information on how to work with the OpenWeather API, refer to the Full-Stack Blog on how to use API keys (https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
 
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+
+
+
+var searchCityBtn = document.querySelector("#search-button");
+
+searchCityBtn.addEventListener("click", searchCity);
+
+function searchCity() {
+    alert("test serech button");
+}
