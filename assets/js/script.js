@@ -25,5 +25,5 @@ searchCityBtn.addEventListener('click', function() {
     var key = "city";
   
     localStorage.setItem(key, value);
+    document.querySelector("#stored-city1").innerHTML = localStorage.getItem("city");
 });
-  
