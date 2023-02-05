@@ -8,7 +8,8 @@
     border: solid 2px black;
 }
 
-.stored-city-list {
+.custom-historybtn {
+    margin: 5px;
     background-color: lightgray;
     text-align: center;
 }

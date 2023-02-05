@@ -27,3 +27,11 @@ searchCityBtn.addEventListener('click', function() {
     localStorage.setItem(key, value);
     document.querySelector("#stored-city1").innerHTML = localStorage.getItem("city");
 });
+
+var historyCityBtn = document.querySelector("#stored-city1");
+
+historyCityBtn.addEventListener("click", historyCity);
+
+function historyCity() {
+    alert("test history city button");
+}
