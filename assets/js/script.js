@@ -11,18 +11,23 @@
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
 
-
+//var requestUrl = "api url";
 var searchCityBtn = document.querySelector("#search-button");
+var historyCityBtn = document.querySelector("#stored-city1");
+
+historyCityBtn.style.display = "none";
 
 searchCityBtn.addEventListener("click", searchCity);
 
 function searchCity() {
     //alert("test serech button");
-    var input = document.querySelector("#city-input").value;
-        if (!input) {
+    var value = document.querySelector("#city-input").value;
+        if (!value) {
             alert("Please insert a city name");
             return;
         }
+
+        historyCityBtn.style.display = "block";
 }
 
 searchCityBtn.addEventListener('click', function() {
@@ -33,18 +38,33 @@ searchCityBtn.addEventListener('click', function() {
     document.querySelector("#stored-city1").innerHTML = localStorage.getItem("city");
 });
 
-var historyCityBtn = document.querySelector("#stored-city1");
-
 historyCityBtn.addEventListener("click", historyCity);
 
 function historyCity() {
     alert("test history city button");
 }
 
-    
+// fetch(requestUrl)
+//   .then(function (response) {
+//     // In order to use the data, it must first be parsed. Use .json() when the
+//     // API response format is JSON.
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log('Fetch Response \n-------------');
+//     console.log(data);
+//   });
 
-// if (historyCityBtn.value) {
-//   historyCityBtn.style.display = "block";
-// } else {
-//   historyCityBtn.style.display = "none";
-// }
+// var requestUrl = 'https://api.github.com/repos/twitter/chill/issues?per_page=5';
+
+// fetch(requestUrl)
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log('Github Repo Issues \n----------');
+//     for (var i = 0; i < data.length; i++) {
+//       console.log(data[i].url);
+//       console.log(data[i].user.login);
+//     }
+//   });

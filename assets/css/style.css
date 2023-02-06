@@ -9,9 +9,11 @@
 }
 
 .custom-historybtn {
-    margin: 5px;
+    margin-top: 5px;
     background-color: lightgray;
+    color: black;
     text-align: center;
+    border: lightgray;
 }
 
 .card1,
