@@ -10,8 +10,37 @@
 
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
+//----------------------------------------------------------------------------------------------------------
 
-//var requestUrl = "api url";
+//collect input from user (city)
+//when the user click search button the button will have a click event
+//after click (input has value), we have to retrieve the value from the input element
+//need to check if (statement) is empty or not
+    //if empty
+        //show modal (from bootstrap)
+        //terminate the application (return)
+    //else
+        //store city name in the local storage
+        //get previous city name from the local storage and then add new current city name and store them in local storage
+        //using the city name build the url to get lat and long data:
+        //http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=apiKey
+        //var apiKey = "49ddb4aef6c533f01011bdd6c2e49ea1"
+        //var cityName = ""
+        //var url = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
+        //var urlTwo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
+        //fetch api using urlTwo in order to get long and lat data
+            //fetch second api to get the five days weather
+                //need a loop
+
+//----------------------------------------------------------------------------------------------------------
+
+//API URL Variables
+apiKey = "49ddb4aef6c533f01011bdd6c2e49ea1"
+cityName = ""
+url = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
+var urlTwo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
+
+//Buttons Variables
 var searchCityBtn = document.querySelector("#search-button");
 var historyCityBtn = document.querySelector("#stored-city1");
 
@@ -30,12 +59,30 @@ function searchCity() {
         historyCityBtn.style.display = "block";
 }
 
-searchCityBtn.addEventListener('click', function() {
-    var value = document.querySelector("#city-input").value;
-    var key = "city";
+// searchCityBtn.addEventListener('click', function() {
+//     var value = document.querySelector("#city-input").value;
+//     var key = "city";
   
-    localStorage.setItem(key, value);
-    document.querySelector("#stored-city1").innerHTML = localStorage.getItem("city");
+//     localStorage.setItem(key, value);
+//     document.querySelector("#stored-city1").innerHTML = localStorage.getItem("city");
+// });
+
+renderPreviousSearch();
+
+function renderPreviousSearch() {
+  var city = localStorage.getItem("city");
+  if (!city) {
+    return;
+  }
+
+  historyCityBtn.textContent = city;
+}
+
+searchCityBtn.addEventListener("click", function() {
+  var city = document.querySelector("#city-input").value;
+
+    localStorage.setItem("city", city);
+    renderPreviousSearch();
 });
 
 historyCityBtn.addEventListener("click", historyCity);
@@ -44,16 +91,16 @@ function historyCity() {
     alert("test history city button");
 }
 
-// fetch(requestUrl)
-//   .then(function (response) {
-//     // In order to use the data, it must first be parsed. Use .json() when the
-//     // API response format is JSON.
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log('Fetch Response \n-------------');
-//     console.log(data);
-//   });
+fetch(requestUrl)
+  .then(function (response) {
+    // In order to use the data, it must first be parsed. Use .json() when the
+    // API response format is JSON.
+    return response.json();
+  })
+  .then(function (data) {
+    console.log('Fetch Response \n-------------');
+    console.log(data);
+  });
 
 // var requestUrl = 'https://api.github.com/repos/twitter/chill/issues?per_page=5';
 
