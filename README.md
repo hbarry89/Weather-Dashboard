@@ -11,7 +11,7 @@
 
 ---------------------------
 
-- User is presented with a blank page that his a search engine for weather.
+- User is presented with a blank page that has a search engine for weather.
 
 <img src="./demo-images/demo1.png" width="600" height="200">
 
@@ -23,7 +23,7 @@
 
 ---------------------------
 
-- City that user inputed is stored as a search history:
+- The city that the user inputed is stored as a search history:
 
 <img src="./demo-images/demo3.png" width="200" height="200">
 
