@@ -13,13 +13,13 @@
 
 - User is presented with a blank page that his a search engine for weather.
 
-<img src="./demo-images/demo1.png" width="400" height="200">
+<img src="./demo-images/demo1.png" width="600" height="200">
 
 ---------------------------
 
 - User inputs a city name, then user is presented with current day weather along with forecast for the next 5 days.
 
-<img src="./demo-images/demo2.png" width="400" height="200">
+<img src="./demo-images/demo2.png" width="600" height="200">
 
 ---------------------------
 
@@ -45,4 +45,4 @@
 ### Applications Used :sparkles:
 - VS Code
 
-## Thank you for visiting! :hibiscus:
+<p align="center">Thank you for visiting! :hibiscus:</p>
