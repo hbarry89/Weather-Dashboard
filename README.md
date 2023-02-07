@@ -11,21 +11,27 @@
 
 ---------------------------
 
-- User is presented with a blank page that has a search engine for weather.
+- User is presented with a blank page that has a search engine for weather:
 
 <img src="./demo-images/demo1.png" width="600" height="200">
 
 ---------------------------
 
-- User inputs a city name, then user is presented with current day weather along with forecast for the next 5 days.
+- User inputs a city name, then user is presented with current day weather (that matches the current date) along with forecast for the next 5 days:
 
 <img src="./demo-images/demo2.png" width="600" height="200">
 
 ---------------------------
 
-- The city that the user inputed is stored as a search history:
+- The citities that the user inputed are stored as a search history:
 
-<img src="./demo-images/demo3.png" width="200" height="200">
+<img src="./demo-images/demo3.png" width="600" height="200">
+
+---------------------------
+
+- When a city from the search history is clicked, it will display information for that city:
+
+<img src="./demo-images/demo4.png" width="600" height="200">
 
 ---------------------------
 
