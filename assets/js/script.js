@@ -102,45 +102,45 @@ function getWeather(lat, lon) {
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date1").textContent = data.list[7].dt_txt.substring(0, 10);
-    //var imageElement = document.createElement("img")
-    //imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[7].weather[7].icon + ".png")
-    document.querySelector("#icon1").append(imageElement);
+    var imageElement1 = document.createElement("img")
+    imageElement1.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png")
+    document.querySelector("#icon1").append(imageElement1);
     document.querySelector("#temp1").textContent = data.list[7].main.temp
     document.querySelector("#wind1").textContent = data.list[7].wind.speed
     document.querySelector("#humidity1").textContent = data.list[7].main.humidity
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date2").textContent = data.list[15].dt_txt.substring(0, 10);
-    //var imageElement = document.createElement("img")
-    //imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[15].weather[15].icon + ".png")
-    document.querySelector("#icon2").append(imageElement);
+    var imageElement2 = document.createElement("img")
+    imageElement2.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[7].weather[0].icon + ".png")
+    document.querySelector("#icon2").append(imageElement2);
     document.querySelector("#temp2").textContent = data.list[15].main.temp
     document.querySelector("#wind2").textContent = data.list[15].wind.speed
     document.querySelector("#humidity2").textContent = data.list[15].main.humidity
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date3").textContent = data.list[23].dt_txt.substring(0, 10);
-    //var imageElement = document.createElement("img")
-    //imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[23].weather[23].icon + ".png")
-    document.querySelector("#icon3").append(imageElement);
+    var imageElement3 = document.createElement("img")
+    imageElement3.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[23].weather[0].icon + ".png")
+    document.querySelector("#icon3").append(imageElement3);
     document.querySelector("#temp3").textContent = data.list[23].main.temp
     document.querySelector("#wind3").textContent = data.list[23].wind.speed
     document.querySelector("#humidity3").textContent = data.list[23].main.humidity
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date4").textContent = data.list[31].dt_txt.substring(0, 10);
-    //var imageElement = document.createElement("img")
-    //imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[31].weather[31].icon + ".png")
-    document.querySelector("#icon4").append(imageElement);
+    var imageElement4 = document.createElement("img")
+    imageElement4.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[31].weather[0].icon + ".png")
+    document.querySelector("#icon4").append(imageElement4);
     document.querySelector("#temp4").textContent = data.list[31].main.temp
     document.querySelector("#wind4").textContent = data.list[31].wind.speed
     document.querySelector("#humidity4").textContent = data.list[31].main.humidity
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date5").textContent = data.list[39].dt_txt.substring(0, 10);
-    //var imageElement = document.createElement("img")
-    //imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[39].weather[39].icon + ".png")
-    document.querySelector("#icon5").append(imageElement);
+    var imageElement5 = document.createElement("img")
+    imageElement5.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[39].weather[0].icon + ".png")
+    document.querySelector("#icon5").append(imageElement5);
     document.querySelector("#temp5").textContent = data.list[39].main.temp
     document.querySelector("#wind5").textContent = data.list[39].wind.speed
     document.querySelector("#humidity5").textContent = data.list[39].main.humidity

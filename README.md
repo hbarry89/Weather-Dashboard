@@ -18,6 +18,7 @@
 ### Resources :books:
 - Bootcamp Materials
 - W3 Schools
+- Tutor and AskBCS Learning Assistants
 - [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
 
 ### Assets :gear:
