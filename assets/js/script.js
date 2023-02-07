@@ -91,6 +91,7 @@ function getWeather(lat, lon) {
 
     document.querySelector("#city0").textContent = data.city.name
     document.querySelector("#date0").textContent = data.list[0].dt_txt.substring(0, 10);
+    document.querySelector("#icon0").innerHTML='';
     var imageElement = document.createElement("img")
     imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png")
     document.querySelector("#icon0").append(imageElement);
@@ -100,6 +101,7 @@ function getWeather(lat, lon) {
 
     ////This displays info for day 1 as captures from the API path, and so on for the rest of days with the corresponding index from the API
     document.querySelector("#date1").textContent = data.list[7].dt_txt.substring(0, 10); //This will remove the time from the date using substring to capture the first 9 staring letters which is for the date
+    document.querySelector("#icon1").innerHTML='';
     var imageElement1 = document.createElement("img") //This is to create an image link for the icon
     imageElement1.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png") //This is to taret the icon from the API path and the same for the rest of the days
     document.querySelector("#icon1").append(imageElement1);
@@ -109,6 +111,7 @@ function getWeather(lat, lon) {
 
     //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date2").textContent = data.list[15].dt_txt.substring(0, 10);
+    document.querySelector("#icon2").innerHTML='';
     var imageElement2 = document.createElement("img")
     imageElement2.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[7].weather[0].icon + ".png")
     document.querySelector("#icon2").append(imageElement2);
@@ -117,6 +120,7 @@ function getWeather(lat, lon) {
     document.querySelector("#humidity2").textContent = data.list[15].main.humidity
 
     document.querySelector("#date3").textContent = data.list[23].dt_txt.substring(0, 10);
+    document.querySelector("#icon3").innerHTML='';
     var imageElement3 = document.createElement("img")
     imageElement3.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[23].weather[0].icon + ".png")
     document.querySelector("#icon3").append(imageElement3);
@@ -125,6 +129,7 @@ function getWeather(lat, lon) {
     document.querySelector("#humidity3").textContent = data.list[23].main.humidity
 
     document.querySelector("#date4").textContent = data.list[31].dt_txt.substring(0, 10);
+    document.querySelector("#icon4").innerHTML='';
     var imageElement4 = document.createElement("img")
     imageElement4.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[31].weather[0].icon + ".png")
     document.querySelector("#icon4").append(imageElement4);
@@ -133,6 +138,7 @@ function getWeather(lat, lon) {
     document.querySelector("#humidity4").textContent = data.list[31].main.humidity
 
     document.querySelector("#date5").textContent = data.list[39].dt_txt.substring(0, 10);
+    document.querySelector("#icon5").innerHTML='';
     var imageElement5 = document.createElement("img")
     imageElement5.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[39].weather[0].icon + ".png")
     document.querySelector("#icon5").append(imageElement5);
