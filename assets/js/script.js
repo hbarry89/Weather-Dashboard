@@ -59,7 +59,7 @@ function searchCity() {
             alert("Please insert a city name");
             return;
         }
-        var requestURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
+        var requestURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
         historyCityBtn.style.display = "block";
 
         fetch(requestURL)
