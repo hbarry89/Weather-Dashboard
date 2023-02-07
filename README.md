@@ -23,12 +23,7 @@
 
 ---------------------------
 
-- The citities that the user inputed are stored as a search history:
-
-<img src="./demo-images/demo3.png" width="600" height="200">
-
----------------------------
-
+- The citities that the user inputed are stored as a search history,
 - When a city from the search history is clicked, it will display information for that city:
 
 <img src="./demo-images/demo4.png" width="600" height="200">
