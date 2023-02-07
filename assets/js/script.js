@@ -100,7 +100,16 @@ function getWeather(lat, lon) {
      document.querySelector("#wind0").textContent = data.list[0].wind.speed
      document.querySelector("#humidity0").textContent = data.list[0].main.humidity
 
-        
+     //document.querySelector("#city1").textContent = data.city.name
+     document.querySelector("#date1").textContent = data.list[7].dt_txt.substring(0, 10);
+     //var imageElement = document.createElement("img")
+     imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png")
+     document.querySelector("#icon1").append(imageElement);
+     document.querySelector("#temp1").textContent = data.list[7].main.temp
+     document.querySelector("#wind1").textContent = data.list[7].wind.speed
+     document.querySelector("#humidity1").textContent = data.list[7].main.humidity
+
+     
 });
 }
 
