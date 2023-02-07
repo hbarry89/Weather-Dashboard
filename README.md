@@ -9,14 +9,29 @@
 
 [Click here](https://hbarry89.github.io/Weather-Dashboard/) to navigate to the live link of this repository.
 
-- Screenshots
+- User is presented with a blank page that his a search for city input:
 
-<img src=“*” width="300" height="300">
+<img src="./demo-images/demo1.png" width="400" height="200">
+
+---------------------------
+
+- User inputs a city name, then user is presented with current day weather along with forecast for the next 5 days.
+
+<img src="./demo-images/demo2.png" width="400" height="200">
+
+---------------------------
+
+- City that user inputed is stored as a search history:
+
+<img src="./demo-images/demo3.png" width="200" height="200">
+
+---------------------------
 
 ## Credit
 
 ### Resources :books:
 - Bootcamp Materials
+- Fetch code from Bootcamp Materials: Activities
 - W3 Schools
 - Tutor and AskBCS Learning Assistants
 - [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
