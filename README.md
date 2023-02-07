@@ -24,7 +24,7 @@
 - [Bootstrap](https://getbootstrap.com/)
 - [OpenWeather](https://openweathermap.org/) API
 
-### Applications Used
+### Applications Used :sparkles:
 - VS Code
 
 ## Thank you for visiting! :hibiscus:
