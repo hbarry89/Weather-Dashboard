@@ -9,7 +9,9 @@
 
 [Click here](https://hbarry89.github.io/Weather-Dashboard/) to navigate to the live link of this repository.
 
-- User is presented with a blank page that his a search for city input:
+---------------------------
+
+- User is presented with a blank page that his a search engine for weather.
 
 <img src="./demo-images/demo1.png" width="400" height="200">
 
