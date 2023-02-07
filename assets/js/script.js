@@ -35,10 +35,13 @@
 //----------------------------------------------------------------------------------------------------------
 
 //API URL Variables
-apiKey = "49ddb4aef6c533f01011bdd6c2e49ea1"
-cityName = ""
-url = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
-var urlTwo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
+var apiKey = "49ddb4aef6c533f01011bdd6c2e49ea1"
+//var cityName = ""
+
+//var urlTwo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
+
+// User City Name Variables
+
 
 //Buttons Variables
 var searchCityBtn = document.querySelector("#search-button");
@@ -50,13 +53,55 @@ searchCityBtn.addEventListener("click", searchCity);
 
 function searchCity() {
     //alert("test serech button");
-    var value = document.querySelector("#city-input").value;
-        if (!value) {
+    var cityName = document.querySelector("#city-input").value;
+
+        if (!cityName) {
             alert("Please insert a city name");
             return;
         }
-
+        var requestURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
         historyCityBtn.style.display = "block";
+
+        fetch(requestURL)
+        .then(function (response) {
+         // In order to use the data, it must first be parsed. Use .json() when the
+        // API response format is JSON.
+        return response.json();
+     })
+        .then(function (data) {
+         console.log('Fetch Response \n-------------');
+         console.log(data);
+         var lat = data[0].lat
+         var lon = data[0].lon
+
+         getWeather(lat, lon);
+    });
+}
+
+function getWeather(lat, lon) {
+    var requestURL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+
+    fetch(requestURL)
+    .then(function (response) {
+     // In order to use the data, it must first be parsed. Use .json() when the
+    // API response format is JSON.
+    return response.json();
+ })
+    .then(function (data) {
+     console.log('Fetch Response \n-------------');
+     console.log(data);
+
+     document.querySelector("#city0").textContent = data.city.name
+     document.querySelector("#date0").textContent = data.list[0].dt_txt.substring(0, 10);
+     var imageElement = document.createElement("img")
+     imageElement.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png")
+     document.querySelector("#icon0").append(imageElement);
+     document.querySelector("#temp0").textContent = data.list[0].main.temp
+     document.querySelector("#wind0").textContent = data.list[0].wind.speed
+     document.querySelector("#humidity0").textContent = data.list[0].main.humidity
+
+        
+});
 }
 
 // searchCityBtn.addEventListener('click', function() {
@@ -91,16 +136,7 @@ function historyCity() {
     alert("test history city button");
 }
 
-fetch(requestUrl)
-  .then(function (response) {
-    // In order to use the data, it must first be parsed. Use .json() when the
-    // API response format is JSON.
-    return response.json();
-  })
-  .then(function (data) {
-    console.log('Fetch Response \n-------------');
-    console.log(data);
-  });
+
 
 // var requestUrl = 'https://api.github.com/repos/twitter/chill/issues?per_page=5';
 
@@ -115,3 +151,4 @@ fetch(requestUrl)
 //       console.log(data[i].user.login);
 //     }
 //   });
+
