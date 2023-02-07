@@ -6,6 +6,11 @@
 
 .city-container {
     border: solid 2px black;
+    display: none;
+}
+
+.day-cards {
+    display: none;
 }
 
 .custom-historybtn {

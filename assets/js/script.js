@@ -34,18 +34,11 @@
 
 //----------------------------------------------------------------------------------------------------------
 
-//API URL Variables
+
 var apiKey = "49ddb4aef6c533f01011bdd6c2e49ea1"
-//var cityName = ""
-
-//var urlTwo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`
-
-// User City Name Variables
-
-
-//Buttons Variables
 var searchCityBtn = document.querySelector("#search-button");
 var historyCityBtn = document.querySelector("#stored-city1");
+
 
 historyCityBtn.style.display = "none";
 
@@ -61,20 +54,25 @@ function searchCity() {
         }
         var requestURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey
         historyCityBtn.style.display = "block";
+        
+        var displayCurrentCity = document.querySelector(".city-container")
+        var displayDayCards = document.querySelector(".day-cards");
+
+        displayCurrentCity.style.display = "block";
+        displayDayCards.style.display = "block";
+
 
         fetch(requestURL)
-        .then(function (response) {
-         // In order to use the data, it must first be parsed. Use .json() when the
-        // API response format is JSON.
-        return response.json();
-     })
-        .then(function (data) {
-         console.log('Fetch Response \n-------------');
-         console.log(data);
-         var lat = data[0].lat
-         var lon = data[0].lon
+            .then(function (response) {
+             return response.json();
+        })
+            .then(function (data) {
+            console.log('Fetch Response \n-------------');
+            console.log(data);
+            var lat = data[0].lat
+            var lon = data[0].lon
 
-         getWeather(lat, lon);
+        getWeather(lat, lon);
     });
 }
 
@@ -100,10 +98,10 @@ function getWeather(lat, lon) {
     document.querySelector("#wind0").textContent = data.list[0].wind.speed
     document.querySelector("#humidity0").textContent = data.list[0].main.humidity
 
-    //document.querySelector("#city1").textContent = data.city.name
-    document.querySelector("#date1").textContent = data.list[7].dt_txt.substring(0, 10);
-    var imageElement1 = document.createElement("img")
-    imageElement1.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png")
+    ////This displays info for day 1 as captures from the API path, and so on for the rest of days with the corresponding index from the API
+    document.querySelector("#date1").textContent = data.list[7].dt_txt.substring(0, 10); //This will remove the time from the date using substring to capture the first 9 staring letters which is for the date
+    var imageElement1 = document.createElement("img") //This is to create an image link for the icon
+    imageElement1.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png") //This is to taret the icon from the API path and the same for the rest of the days
     document.querySelector("#icon1").append(imageElement1);
     document.querySelector("#temp1").textContent = data.list[7].main.temp
     document.querySelector("#wind1").textContent = data.list[7].wind.speed
@@ -118,7 +116,6 @@ function getWeather(lat, lon) {
     document.querySelector("#wind2").textContent = data.list[15].wind.speed
     document.querySelector("#humidity2").textContent = data.list[15].main.humidity
 
-    //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date3").textContent = data.list[23].dt_txt.substring(0, 10);
     var imageElement3 = document.createElement("img")
     imageElement3.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[23].weather[0].icon + ".png")
@@ -127,7 +124,6 @@ function getWeather(lat, lon) {
     document.querySelector("#wind3").textContent = data.list[23].wind.speed
     document.querySelector("#humidity3").textContent = data.list[23].main.humidity
 
-    //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date4").textContent = data.list[31].dt_txt.substring(0, 10);
     var imageElement4 = document.createElement("img")
     imageElement4.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[31].weather[0].icon + ".png")
@@ -136,7 +132,6 @@ function getWeather(lat, lon) {
     document.querySelector("#wind4").textContent = data.list[31].wind.speed
     document.querySelector("#humidity4").textContent = data.list[31].main.humidity
 
-    //document.querySelector("#city1").textContent = data.city.name
     document.querySelector("#date5").textContent = data.list[39].dt_txt.substring(0, 10);
     var imageElement5 = document.createElement("img")
     imageElement5.setAttribute("src", "https://openweathermap.org/img/w/" + data.list[39].weather[0].icon + ".png")
@@ -144,7 +139,6 @@ function getWeather(lat, lon) {
     document.querySelector("#temp5").textContent = data.list[39].main.temp
     document.querySelector("#wind5").textContent = data.list[39].wind.speed
     document.querySelector("#humidity5").textContent = data.list[39].main.humidity
-
 
 });
 }
@@ -180,20 +174,3 @@ historyCityBtn.addEventListener("click", historyCity);
 function historyCity() {
     alert("test history city button");
 }
-
-
-
-// var requestUrl = 'https://api.github.com/repos/twitter/chill/issues?per_page=5';
-
-// fetch(requestUrl)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log('Github Repo Issues \n----------');
-//     for (var i = 0; i < data.length; i++) {
-//       console.log(data[i].url);
-//       console.log(data[i].user.login);
-//     }
-//   });
-
